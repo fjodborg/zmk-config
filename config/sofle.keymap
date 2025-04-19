@@ -9,6 +9,16 @@
  #include <dt-bindings/zmk/bt.h>
  
  / {
+    
+    behaviors {
+        gresc: danish_key {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
+            mods = <(RALT)>;
+        };
+    };
+    // TODO: Replace danish RALT combos  with raise or lower for getting the same effect but where we maintain alt combos 
      keymap {
          compatible = "zmk,keymap";
  
