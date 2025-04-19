@@ -16,7 +16,8 @@
             bindings
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N8>
-                , <&macro_release &kp LALT>;
+                , <&macro_release &kp LALT>
+                ;
         };
         DK_OE_U: DK_OE_U {
             compatible = "zmk,behavior-macro";
@@ -24,7 +25,8 @@
             bindings
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N6>
-                , <&macro_release &kp LALT>;
+                , <&macro_release &kp LALT>
+                ;
         };
             
         behaviors {
@@ -32,7 +34,7 @@
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp DK_OE_L>, <&kp DK_OE_U>;
-                mods = <(MOD_LSHFT|MOD_RSFT)>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
             };
         };
     };
@@ -67,7 +69,7 @@
              bindings = <
  &trans    &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &kp F11
  &kp GRAVE &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N6    &kp N7   &kp N8          &kp N9    &kp N0    &kp F12
- &trans    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &DK_OE
+ &trans    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &dk_oe
  &mo 3     &kp EQUAL &kp MINUS &kp KP_PLUS &kp LBRC  &kp RBRC  &trans   &trans &kp LBKT  &kp RBKT &kp SEMI        &kp COLON &kp BSLH  &trans
                      &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
              >;
