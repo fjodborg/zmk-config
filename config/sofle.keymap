@@ -15,8 +15,8 @@
         dk_ae_lower: dk_ae_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <10>;
             bindings
                 = <&macro_press &kp LALT>
                 // æ	Alt 145 or Alt 0230	Latin small letter ae, ae ligature, ash (from Old English æsc)
@@ -26,8 +26,8 @@
         dk_ae_upper: dk_ae_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <10>;
             bindings
                 = <&macro_press &kp LALT>
                 // Æ	Alt 146 or Alt 0198	Latin capital letter AE, AE ligature
@@ -36,8 +36,8 @@
         };
         dk_oe_lower: dk_oe_lower {
             compatible = "zmk,behavior-macro";
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <10>;
             #binding-cells = <0>;
                 bindings
                 = <&macro_press &kp LALT>
@@ -48,8 +48,8 @@
         dk_oe_upper: dk_oe_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <10>;
             bindings
                 = <&macro_press &kp LALT>
                 // Ø	Alt 0216	Latin capital letter O with stroke, slashed O
@@ -59,8 +59,8 @@
         dk_aa_lower: dk_aa_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <10>;
             bindings
                 = <&macro_press &kp LALT>
                 // å	Alt 134 or Alt 0229
@@ -70,8 +70,8 @@
         dk_aa_upper: dk_aa_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
+            wait-ms = <20>;
+            tap-ms = <10>;
             bindings
                 = <&macro_press &kp LALT>
                 // Å	Alt 143 or Alt 0197	Latin capital letter A with ring above
@@ -105,16 +105,16 @@
  
         default_layer {
  // ------------------------------------------------------------------------------------------------------------
- // |  ESC  |  1  |  2     |  3     |  4      |  5   |                    |  6    |  7     |  8      |  9      |   0    | BKSPC |
- // |  TAB  |  Q  |  W     |  E     |  R      |  T   |                    |  Y    |  U     |  I      |  O      |   P    |   \   |
- // |  `    |  A  |  S     |  D     |  F      |  G   |                    |  H    |  J     |  K      |  L      |   ;    |   '   |
- // | SHIFT |  Z  |  X     |  C     |  V      |  B   | MUTE   | |         |  N    |  M     |  ,      |  .      |   /    | SHIFT |
- //               | GUI    | ALT    | CTRL    | LOWER| SPACE  | | ENTER   | RAISE | CTRL   | ALT     | GUI     |
+ // | ESC |  1  |  2     |  3     |  4      |  5   |                    |  6    |  7     |  8      |  9      |   0    | BKSPC |
+ // | TAB |  Q  |  W     |  E     |  R      |  T   |                    |  Y    |  U     |  I      |  O      |   P    |   \   |
+ // | `   |  A  |  S     |  D     |  F      |  G   |                    |  H    |  J     |  K      |  L      |   ;    |   '   |
+ // |SHIFT|  Z  |  X     |  C     |  V      |  B   | MUTE   | |         |  N    |  M     |  ,      |  .      |   /    | SHIFT |
+ //             | GUI    | ALT    | CTRL    | LOWER| SPACE  | | ENTER   | RAISE | CTRL   | ALT     | GUI     |
             bindings = <
- &kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                       &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
- &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                        &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSLH
- &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                        &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
- &kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE &none      &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+&kp ESC   &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                       &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp BSPC
+&kp TAB   &kp Q  &kp W    &kp E    &kp R     &kp T                        &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSLH
+&kp GRAVE &kp A  &kp S    &kp D    &kp F     &kp G                        &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
+&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_MUTE &none      &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
                   &kp LGUI &kp LALT &kp LCTRL &mo 1  &kp SPACE  &kp RET    &mo 2  &kp RCTRL &kp RALT  &kp RGUI
             >;
 
@@ -124,17 +124,17 @@
         lower_layer {
 // TODO: ADD home, end, page up, page down, delete, screenshot, capslock, arrow keys, keypads
 // ------------------------------------------------------------------------------------------------------------
-// |       |  F1   |  F2     |  F3       |  F4     |  F5    |                |  F6     |  F7    |  F8      |  F9     |  F10     |  F11  |
-// |       |       |  7      |  8        |  9      |        |                |         |        |          |   -     |    =     |   Å   |
-// |       |       |  4      |  5        |  6      |        |                |         |        |  [       |   ]     |   Æ      |   Ø   |
-// |       |  0    |  1      |  2        |  3      |        | |        |     |         |        |          |         |          |       |
-//                 |         |           |         |        | |        |     |         |        |          |         |
+// |      |  F1   |  F2     |  F3       |  F4     |  F5    |                   |  F6     |  F7    |  F8      |  F9     |  F10     |  F11  |
+// |      |       |  7      |  8        |  9      |        |                   |         |        |          |   -     |    =     |   Å   |
+// |      |       |  4      |  5        |  6      |        |                   |         |        |  [       |   ]     |   Æ      |   Ø   |
+// |      |  0    |  1      |  2        |  3      |        |        | |        |         |        |          |         |          |       |
+//                |         |           |         |        |        | |        |         |        |          |         |
             bindings = <
-&kp F1    &kp F2    &kp F3    &kp F4      &kp F5    &kp F6                    &kp F7    &kp F8   &kp F9    &kp F10   &kp F11   &kp F12
-&kp GRAVE &none     &kp KP_N7 &kp KP_N8   &kp KP_N9 &none                     &none     &none    &none     &kp MINUS &kp EQUAL &dk_aa
-&trans    &none     &kp KP_N4 &kp KP_N5   &kp KP_N6 &none                     &none     &none    &kp LBKT  &kp RBKT  &dk_ae    &dk_oe
-&mo 3     &kp KP_N0 &kp KP_N1 &kp KP_N2   &kp KP_N3 &none     &trans   &trans &none     &none    &none     &none     &none     &trans
-                    &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans    &trans
+&kp F1    &kp F2    &kp F3    &kp F4      &kp F5    &kp F6                      &kp F7    &kp F8   &kp F9    &kp F10   &kp F11   &kp F12
+&kp GRAVE &none     &kp KP_N7 &kp KP_N8   &kp KP_N9 &none                       &none     &none    &none     &kp MINUS &kp EQUAL &dk_aa
+&trans    &none     &kp KP_N4 &kp KP_N5   &kp KP_N6 &none                       &none     &none    &kp LBKT  &kp RBKT  &dk_ae    &dk_oe
+&trans    &kp KP_N0 &kp KP_N1 &kp KP_N2   &kp KP_N3 &none &kp KP_NUMLOCK &trans &none     &none    &none     &none     &none     &trans
+                    &trans    &trans      &trans    &trans    &trans     &trans &trans    &trans   &trans    &trans
             >;
             
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
