@@ -17,7 +17,7 @@
     // å	Alt 134 or Alt 0229
 
     macros {
-        dk_oe_low: dk_oe_low {
+        dk_oe_lower: dk_oe_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -25,7 +25,7 @@
                 , <&macro_tap &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N8>
                 , <&macro_release &kp LALT>;
         };
-        dk_oe_up: dk_oe_up {
+        dk_oe_upper: dk_oe_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -38,7 +38,7 @@
         dk_oe: dk_oe {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&dk_oe_low>, <&dk_oe_up>;
+            bindings = <&dk_oe_lower>, <&dk_oe_upper>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -74,7 +74,7 @@
              bindings = <
  &trans    &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7   &kp F8          &kp F9    &kp F10   &kp F11
  &kp GRAVE &kp N1    &kp N2    &kp N3      &kp N4    &kp N5                    &kp N6    &kp N7   &kp N8          &kp N9    &kp N0    &kp F12
- &trans    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &dk_oe_up
+ &trans    &kp EXCL  &kp AT    &kp HASH    &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &dk_oe
  &mo 3     &kp EQUAL &kp MINUS &kp KP_PLUS &kp LBRC  &kp RBRC  &trans   &trans &kp LBKT  &kp RBKT &kp SEMI        &kp COLON &kp BSLH  &trans
                      &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
              >;
