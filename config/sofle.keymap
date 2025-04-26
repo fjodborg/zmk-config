@@ -15,8 +15,8 @@
         dk_ae_lower: dk_ae_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings
                 = <&macro_press &kp LALT>
                 // æ	Alt 145 or Alt 0230	Latin small letter ae, ae ligature, ash (from Old English æsc)
@@ -26,8 +26,8 @@
         dk_ae_upper: dk_ae_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings
                 = <&macro_press &kp LALT>
                 // Æ	Alt 146 or Alt 0198	Latin capital letter AE, AE ligature
@@ -36,8 +36,8 @@
         };
         dk_oe_lower: dk_oe_lower {
             compatible = "zmk,behavior-macro";
-            wait-ms = <20>;
-            tap-ms = <10>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             #binding-cells = <0>;
                 bindings
                 = <&macro_press &kp LALT>
@@ -48,8 +48,8 @@
         dk_oe_upper: dk_oe_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings
                 = <&macro_press &kp LALT>
                 // Ø	Alt 0216	Latin capital letter O with stroke, slashed O
@@ -59,8 +59,8 @@
         dk_aa_lower: dk_aa_lower {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings
                 = <&macro_press &kp LALT>
                 // å	Alt 134 or Alt 0229
@@ -70,8 +70,8 @@
         dk_aa_upper: dk_aa_upper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <10>;
+            wait-ms = <40>;
+            tap-ms = <40>;
             bindings
                 = <&macro_press &kp LALT>
                 // Å	Alt 143 or Alt 0197	Latin capital letter A with ring above
@@ -124,17 +124,17 @@
         lower_layer {
 // TODO: ADD home, end, page up, page down, delete, screenshot, capslock, arrow keys, keypads
 // ------------------------------------------------------------------------------------------------------------
-// |      |  F1   |  F2     |  F3       |  F4     |  F5    |                   |  F6     |  F7    |  F8      |  F9     |  F10     |  F11  |
+// |  F   |  F2   |  F3     |  F4       |  F5     |  F6    |                   |  F7     |  F8    |  F9      |  F10    |  F11     |  F12  |
 // |      |       |  7      |  8        |  9      |        |                   |         |        |          |   -     |    =     |   Å   |
 // |      |       |  4      |  5        |  6      |        |                   |         |        |  [       |   ]     |   Æ      |   Ø   |
-// |      |  0    |  1      |  2        |  3      |        |        | |        |         |        |          |         |          |       |
+// |      |  0    |  1      |  2        |  3      |        | nlk    | |        |         |        |          |         |          |       |
 //                |         |           |         |        |        | |        |         |        |          |         |
             bindings = <
 &kp F1    &kp F2    &kp F3    &kp F4      &kp F5    &kp F6                      &kp F7    &kp F8   &kp F9    &kp F10   &kp F11   &kp F12
-&kp GRAVE &none     &kp KP_N7 &kp KP_N8   &kp KP_N9 &none                       &none     &none    &none     &kp MINUS &kp EQUAL &dk_aa
-&trans    &none     &kp KP_N4 &kp KP_N5   &kp KP_N6 &none                       &none     &none    &kp LBKT  &kp RBKT  &dk_ae    &dk_oe
+&trans    &none     &kp KP_N7 &kp KP_N8   &kp KP_N9 &none                       &none     &none    &none     &kp MINUS &kp EQUAL &dk_aa
+&none     &none     &kp KP_N4 &kp KP_N5   &kp KP_N6 &none                       &none     &none    &kp LBKT  &kp RBKT  &dk_ae    &dk_oe
 &trans    &kp KP_N0 &kp KP_N1 &kp KP_N2   &kp KP_N3 &none &kp KP_NUMLOCK &trans &none     &none    &none     &none     &none     &trans
-                    &trans    &trans      &trans    &trans    &trans     &trans &trans    &trans   &trans    &trans
+                    &trans    &trans      &trans    &trans &trans        &trans &trans    &trans   &trans    &trans
             >;
             
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
